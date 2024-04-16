@@ -52,3 +52,9 @@ def lambda_handler(event, context):
         'body': json.dumps({'resultado': resultado})
     }
 #+END_SRC
+
+#+BEGIN_SRC 
+curl -X GET https://<URL_DO_API_GATEWAY>?numero=7
+#+END_SRC
+
+
