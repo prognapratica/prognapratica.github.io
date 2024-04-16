@@ -11,4 +11,44 @@ menor controle de banco de dados, já que é uma solução pronta, mas atende a 
 
 
 * Entendendo serverless
-  
+Seu código no computador:
+#+BEGIN_SRC python
+escolha = int(input('escolha um número'))
+if escolha >= 5:
+    print('maior do que 5')
+else:
+    print('menor do que 5')
+#+END_SRC
+
+Seu código na web:
+#+BEGIN_SRC python
+from flask import Flask
+
+app = Flask(__name__)
+@app.get('/escolha/<int:numero>')
+def escolha(numero):
+    if escolha >= 5:
+        return 'maior do que 5'
+    else:
+        return 'menor do que 5'
+#+END_SRC
+
+
+Seu código em serverless:
+#+BEGIN_SRC python
+import json
+def lambda_handler(event, context):
+    numero = int(event['queryStringParameters']['numero'])
+
+    
+    if numero >= 5:
+        resultado = 'maior do que 5'
+    else:
+        resultado = 'menor do que 5'
+
+    
+    return {
+        'statusCode': 200,
+        'body': json.dumps({'resultado': resultado})
+    }
+#+END_SRC
