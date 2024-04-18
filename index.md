@@ -71,3 +71,9 @@ def lambda_handler(event, context):
 ```
 
     curl -X GET https://<URL_DO_API_GATEWAY>?numero=7
+
+# DJANGO
+## Como expor settings ou qualquer outro arquivo nos templates?
+
+context_processors
+
