@@ -2,7 +2,7 @@
 
 ## Por quê?
 
-Ao invés de criar um app com flask, por exemplo, ou express, o
+Hello Ao invés de criar um app com flask, por exemplo, ou express, o
 supabase/firebase/pocketbase, já provê a api para manipulação do banco
 de dados. Para isso, ao invés de você autenticar tudo pelo backend, você
 pode configurar e autenticar tudo pelo supabase. Dessa forma, a
